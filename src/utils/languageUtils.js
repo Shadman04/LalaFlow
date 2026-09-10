@@ -1,0 +1,90 @@
+// Multilingual support & localization dictionaries (EN, HI, BN)
+
+export const LOCALES = [
+  { code: 'en-IN', name: 'English (India)', flag: '🇬🇧' },
+  { code: 'hi-IN', name: 'Hindi / Hinglish', flag: '🇮🇳' },
+  { code: 'bn-IN', name: 'Bengali (বাংলা)', flag: '🇮🇳' }
+];
+
+export const TRANSLATIONS = {
+  'en-IN': {
+    welcomeGreeting: 'Turn today\'s chaos into clear action.',
+    nextActionTitle: 'YOUR NEXT BEST ACTION',
+    whyThis: 'WHY THIS?',
+    startTaskBtn: 'START TASK',
+    askLalaBtn: 'ASK LALA',
+    activeTasks: 'Active Tasks',
+    overdueTasks: 'Overdue Tasks',
+    workflowHealth: 'WORKFLOW HEALTH',
+    needsAttention: 'NEEDS ATTENTION',
+    recentActivity: 'RECENT ACTIVITY',
+    chaosInboxTitle: 'Chaos Inbox',
+    chaosInboxSub: 'Turn scattered messages into clear action.',
+    analyzeChaosBtn: 'ANALYZE CHAOS',
+    addSelectedToFlow: 'ADD SELECTED TO FLOW',
+    flowBoardTitle: 'Flow Board',
+    myFocusTitle: 'What Should I Do Now?',
+    teamTitle: 'Team Workload',
+    activityTitle: 'Activity Audit Log',
+    settingsTitle: 'Workspace Settings',
+    lalaAssistantTitle: 'LALA AI Operations Assistant',
+    briefingHeader: 'Daily Operational Briefing',
+    reviewPrioritiesBtn: 'REVIEW PRIORITIES',
+    playBriefingBtn: 'PLAY BRIEFING',
+  },
+  'hi-IN': {
+    welcomeGreeting: 'Aaj ke chaos ko clear action mein badlein.',
+    nextActionTitle: 'AAPKA NEXT BEST ACTION',
+    whyThis: 'YEH KYUN?',
+    startTaskBtn: 'TASK SHURU KAREIN',
+    askLalaBtn: 'LALA SE POOCHEIN',
+    activeTasks: 'Active Tasks',
+    overdueTasks: 'Overdue Tasks',
+    workflowHealth: 'WORKFLOW HEALTH',
+    needsAttention: 'DHYAN CHAHIYE',
+    recentActivity: 'HAAL HI KI ACTIVITY',
+    chaosInboxTitle: 'Chaos Inbox',
+    chaosInboxSub: 'Bikhre hue messages ko clear action mein badlein.',
+    analyzeChaosBtn: 'CHAOS ANALYZE KAREIN',
+    addSelectedToFlow: 'FLOW MEIN ADD KAREIN',
+    flowBoardTitle: 'Flow Board',
+    myFocusTitle: 'Mujhe Abhi Kya Karna Chahiye?',
+    teamTitle: 'Team Ka Kaam',
+    activityTitle: 'Activity Log',
+    settingsTitle: 'Settings',
+    lalaAssistantTitle: 'LALA AI Assistant',
+    briefingHeader: 'Dainik Operational Briefing',
+    reviewPrioritiesBtn: 'PRIORITIES REVIEW KAREIN',
+    playBriefingBtn: 'BRIEFING SUNEIN',
+  },
+  'bn-IN': {
+    welcomeGreeting: 'Ajker chaos ke spashto action-e rupantor korun.',
+    nextActionTitle: 'APNAR NEXT BEST ACTION',
+    whyThis: 'ETI KENO?',
+    startTaskBtn: 'KAJ SHURU KORUN',
+    askLalaBtn: 'LALA KE JIGYESA KORUN',
+    activeTasks: 'Active Tasks',
+    overdueTasks: 'Overdue Tasks',
+    workflowHealth: 'WORKFLOW HEALTH',
+    needsAttention: 'ATTENTION DORKAR',
+    recentActivity: 'SESH ACTIVITY',
+    chaosInboxTitle: 'Chaos Inbox',
+    chaosInboxSub: 'Elomelo message gulo ke spashto kaje porinoto korun.',
+    analyzeChaosBtn: 'CHAOS ANALYZE KORUN',
+    addSelectedToFlow: 'FLOW-TE JUKTO KORUN',
+    flowBoardTitle: 'Flow Board',
+    myFocusTitle: 'Ami Ekhon Ki Korbo?',
+    teamTitle: 'Team Workload',
+    activityTitle: 'Activity Log',
+    settingsTitle: 'Settings',
+    lalaAssistantTitle: 'LALA AI Assistant',
+    briefingHeader: 'Dainik Briefing',
+    reviewPrioritiesBtn: 'PRIORITY REVIEW KORUN',
+    playBriefingBtn: 'BRIEFING SHUNUN',
+  }
+};
+
+export function getTranslation(lang, key) {
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS['en-IN'];
+  return dict[key] || TRANSLATIONS['en-IN'][key] || key;
+}
